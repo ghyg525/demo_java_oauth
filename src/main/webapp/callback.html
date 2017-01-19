@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>第三方登录</title>
+
+<!-- http://wiki.open.qq.com/wiki/website/JS_SDK%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E -->
+<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" 
+charset="utf-8" data-callback="true"></script>
+	
+</head>
+<body>
+
+<span id="qqLoginBtn"></span>
+
+</body>
+
+<script type="text/javascript">
+QC.Login.getMe(function(openId, accessToken){
+	alert(openId);
+});
+</script>
+
+</html>
