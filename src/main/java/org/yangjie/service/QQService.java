@@ -67,7 +67,7 @@ public class QQService{
 	 * @author YangJie [2017年2月22日 下午6:28:49]
 	 * @param openid
 	 * @param token
-	 * @return
+	 * @return http://wiki.connect.qq.com/get_user_info
 	 */
 	public Map<String, String> getInfo(String openid, String token) {
 		String url = new StringBuilder(INFO_URL)

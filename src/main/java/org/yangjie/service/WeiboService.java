@@ -48,17 +48,15 @@ public class WeiboService{
 	/**
 	 * 获取用户信息
 	 * @author YangJie [2017年2月22日 下午6:28:49]
-	 * @param openid
+	 * @param uid
 	 * @param token
-	 * @return
+	 * @return http://open.weibo.com/wiki/2/users/show
 	 */
-	public Map<String, String> getInfo(String openid, String token) {
+	public Map<String, String> getInfo(String uid, String token) {
 		String url = new StringBuilder(INFO_URL)
-				.append("?oauth_consumer_key=").append(APPID)
-				.append("&openid=").append(openid)
-				.append("&access_token=").append(token).toString();
+				.append("?access_token=").append(token)
+				.append("&uid=").append(uid).toString();
 		String result = HttpUtil.get(url);
-		// http://open.weibo.com/wiki/2/users/show
 		return JsonUtil.toObject(result, HashMap.class, Map.class, String.class, String.class);
 	}	
 	
